@@ -11,6 +11,13 @@ struct SoundscapeApp: App {
         .environment(mixer)
     }
     .windowResizability(.contentSize)
+    .commands {
+      CommandGroup(replacing: .appInfo) {
+        Button("About Soundscape") {
+          NSApp.orderFrontStandardAboutPanel(options: [.credits: credits])
+        }
+      }
+    }
 
     MenuBarExtra {
       MenuBarContent()
@@ -19,5 +26,23 @@ struct SoundscapeApp: App {
       Image(systemName: mixer.isPlaying ? "waveform.circle.fill" : "waveform.circle")
     }
     .menuBarExtraStyle(.window)
+  }
+
+  private var credits: NSAttributedString {
+    let paragraph = NSMutableParagraphStyle()
+    paragraph.alignment = .center
+    return NSAttributedString(
+      string: """
+        Soundscape includes no audio. It plays the Background Sounds that come with macOS. \
+        They belong to Apple and are covered by the macOS Software License Agreement.
+
+        Soundscape isn't affiliated with Apple.
+        """,
+      attributes: [
+        .font: NSFont.systemFont(ofSize: NSFont.smallSystemFontSize),
+        .foregroundColor: NSColor.secondaryLabelColor,
+        .paragraphStyle: paragraph,
+      ]
+    )
   }
 }
