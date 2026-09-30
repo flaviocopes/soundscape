@@ -1,0 +1,24 @@
+name: Soundscape
+options:
+  bundleIdPrefix: com.flaviocopes
+  deploymentTarget:
+    macOS: "15.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  Soundscape:
+    type: application
+    platform: macOS
+    sources: [Soundscape]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.flaviocopes.soundscape
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Soundscape
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.music
+        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_STYLE: Manual
