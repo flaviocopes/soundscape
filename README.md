@@ -44,10 +44,12 @@ On a work laptop you might not be able to install apps in `/Applications`. You c
 
 ## Where the sounds come from
 
-Soundscape doesn't include any audio, and it isn't affiliated with Apple. It plays the same files macOS uses for Background Sounds:
+Soundscape doesn't include any audio. It plays the same files macOS uses for Background Sounds:
 
 - Sounds your Mac already has play right away, from `/System/Library/AssetsV2/com_apple_MobileAsset_ComfortSoundsAssets`.
 - The others download from Apple's servers when you click **Download**, into `~/Library/Application Support/Soundscape/Sounds`. Delete that folder to remove them.
+
+The files come straight from Apple to your Mac. They never go through a server of mine.
 
 ## Privacy
 
@@ -104,6 +106,18 @@ Soundscape reads the catalog macOS uses for Background Sounds, a property list o
 
 Every sound gets two `AVAudioPlayerNode`s in one `AVAudioEngine`. Soundscape picks a random file, never the same one twice in a row when there's a choice, and queues it on the audio clock so it overlaps the previous one by 4 seconds with an equal-power crossfade. The next file is always queued before the current one ends, so a busy moment in the app can't cause a gap.
 
+## Legal
+
+Soundscape is an independent project. It isn't affiliated with, endorsed by or sponsored by Apple.
+
+The Background Sounds belong to Apple. The repository, the source code and the release zip contain none of Apple's audio files. Soundscape plays the copies macOS installs, or downloads them from Apple's servers to your Mac, the same way macOS does. It doesn't host or redistribute them.
+
+The sounds are part of macOS, so Apple's [macOS Software License Agreement](https://www.apple.com/legal/sla/) covers them, and using them within its terms is up to you. That means listening to them on a Mac you own or control. Don't copy the files off it, share them, or put them in videos, podcasts, streams or other projects.
+
+Apple can change or remove the sounds, and the servers they download from, at any time. If that happens, downloads in Soundscape stop working.
+
+Apple, Mac and macOS are trademarks of Apple Inc., registered in the U.S. and other countries and regions.
+
 ## License
 
-[MIT](LICENSE)
+The [MIT license](LICENSE) covers Soundscape's source code only. It gives you no rights to Apple's sounds. Soundscape is provided as is, without warranty of any kind.
