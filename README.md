@@ -84,7 +84,7 @@ The app icon is drawn in code. Edit `scripts/render-icon.swift`, then write a ne
 swift scripts/render-icon.swift
 ```
 
-The screenshots come from the real app views. The script plays three sounds with the volume at zero, and uses its own settings, so your saved mix stays as it is:
+The screenshots come from the real app views. The script plays three sounds with the audio muted, and uses its own settings, so your saved mix stays as it is:
 
 ```sh
 scripts/screenshot.sh

@@ -1,7 +1,7 @@
 #!/bin/sh
 # Renders docs/screenshot-light.png and docs/screenshot-dark.png from the real app views.
 # The capture app has its own bundle ID, so your saved mix and volumes stay untouched.
-# It plays Rain, Fire and Stream with the master volume at zero.
+# It plays Rain, Fire and Stream with the audio engine muted.
 set -eu
 
 ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
