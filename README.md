@@ -6,7 +6,7 @@ Apple makes 16 of these sounds, from Balanced Noise to Rain on Roof, but macOS p
 
 ## Download
 
-Get `Soundscape-1.0.0.zip` from the [latest release](https://github.com/flaviocopes/soundscape/releases/latest), unzip it, and drag Soundscape to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
+Get `Soundscape-1.0.1.zip` from the [latest release](https://github.com/flaviocopes/soundscape/releases/latest), unzip it, and drag Soundscape to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
 
 ### Opening it the first time
 
