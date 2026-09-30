@@ -25,8 +25,8 @@ swift scripts/render-banner.swift  # docs/banner.png, from the icon and the dark
 
 ## Rules
 
-- Never add Apple's audio files to the repo. The app plays the copies in `/System/Library/AssetsV2/com_apple_MobileAsset_ComfortSoundsAssets` and downloads the others into `~/Library/Application Support/Soundscape/Sounds`.
+- Never add Apple's audio files to the repo, and never put Apple's audio in anything published. The app plays the copies in `/System/Library/AssetsV2/com_apple_MobileAsset_ComfortSoundsAssets` and downloads the others into `~/Library/Application Support/Soundscape/Sounds`. The README's Legal section and the About panel credits in `SoundscapeApp.swift` describe this, so keep them accurate if it changes.
 - Keep scheduling on the audio clock. Segments are queued one ahead with sample times, so a late task wake-up can't cause a gap.
 - Verify UI changes by building the app and opening it. `scripts/screenshot.sh` renders the real views without touching your saved mix.
 - The app isn't sandboxed and has no Developer ID. Releases are ad-hoc signed and not notarized.
-- The 30-second demo video comes from the separate Remotion project `~/dev/soundscape-showreel`. It's not part of this repo.
+- The 30-second demo video comes from the separate Remotion project `~/dev/soundscape-showreel`. It's not part of this repo. Its soundtrack uses synthesized stand-ins for the sounds, never Apple's audio.
