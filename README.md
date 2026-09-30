@@ -10,7 +10,7 @@ Read the announcement and watch the 30-second demo on my blog: [I built Soundsca
 
 ## Download
 
-Get `Soundscape-1.0.1.zip` from the [latest release](https://github.com/flaviocopes/soundscape/releases/latest), unzip it, and drag Soundscape to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
+Get `Soundscape-1.0.2.zip` from the [latest release](https://github.com/flaviocopes/soundscape/releases/latest), unzip it, and drag Soundscape to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
 
 ### Opening it the first time
 
@@ -38,6 +38,7 @@ On a work laptop you might not be able to install apps in `/Applications`. You c
 - **Play** brings back your last mix, and `Space` does the same while the window or the panel is open
 - Sounds your Mac doesn't have yet show their size and download from Apple with one click
 - Your mix and volumes are remembered between launches
+- Updates from inside the app: it checks GitHub once a day, and **Install and Relaunch** puts the new version in place
 - It keeps playing when you plug in headphones or switch the output device
 - Light and dark appearance following the macOS setting
 
@@ -57,12 +58,19 @@ The files come straight from Apple to your Mac. They never go through a server o
 
 ## Privacy
 
-Soundscape goes online in two cases:
+Soundscape goes online in three cases:
 
 - At launch, it reads Apple's list of Background Sounds from `mesu.apple.com`, so the sounds added in newer macOS versions show up.
 - When you click **Download**, it downloads that sound from Apple.
+- Once a day, it asks GitHub whether there's a newer version of Soundscape. It downloads one only when you click **Install and Relaunch**.
 
 There are no accounts, and nothing about you or your mix leaves your Mac.
+
+To turn off the daily check, run this in Terminal. **Soundscape → Check for Updates…** still works.
+
+```bash
+defaults write com.flaviocopes.soundscape AppUpdaterAutomaticChecks -bool false
+```
 
 ## Build it from source
 

@@ -4,6 +4,10 @@ import SwiftUI
 struct SoundscapeApp: App {
   @State private var mixer = Mixer()
 
+  init() {
+    AppUpdater.shared.start(repository: "flaviocopes/soundscape")
+  }
+
   var body: some Scene {
     Window("Soundscape", id: "mixer") {
       MixerView()
@@ -15,6 +19,9 @@ struct SoundscapeApp: App {
       CommandGroup(replacing: .appInfo) {
         Button("About Soundscape") {
           NSApp.orderFrontStandardAboutPanel(options: [.credits: credits])
+        }
+        Button("Check for Updates…") {
+          AppUpdater.shared.checkForUpdates()
         }
       }
     }
