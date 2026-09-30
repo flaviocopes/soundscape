@@ -4,6 +4,10 @@ Soundscape mixes the Background Sounds built into macOS. Turn on Rain, Fire and 
 
 Apple makes 16 of these sounds, from Balanced Noise to Rain on Roof, but macOS plays only one at a time. Soundscape plays as many as you want and loops each one without a gap.
 
+Read the announcement and watch the 30-second demo on my blog: [I built Soundscape, a mixer for the Background Sounds on your Mac](https://flaviocopes.com/soundscape/).
+
+[![Watch the 30-second Soundscape demo](docs/showreel-poster.jpg)](https://flaviocopes.com/soundscape/)
+
 ## Download
 
 Get `Soundscape-1.0.1.zip` from the [latest release](https://github.com/flaviocopes/soundscape/releases/latest), unzip it, and drag Soundscape to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
