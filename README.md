@@ -36,6 +36,7 @@ On a work laptop you might not be able to install apps in `/Applications`. You c
 - Sounds fade in when you turn them on and fade out when you turn them off
 - The whole mixer in a menu bar panel, with an icon that fills in while something plays
 - **Play** brings back your last mix, and `Space` does the same while the window or the panel is open
+- The play/pause key on the keyboard pauses and resumes the mix from any app, as long as Soundscape is the app that played last
 - Sounds your Mac doesn't have yet show their size and download from Apple with one click
 - Your mix and volumes are remembered between launches
 - Updates from inside the app: it checks GitHub once a day, and **Install and Relaunch** puts the new version in place

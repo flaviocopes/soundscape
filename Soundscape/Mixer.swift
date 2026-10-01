@@ -1,4 +1,5 @@
 import AVFoundation
+import MediaPlayer
 import Observation
 
 @MainActor
@@ -38,6 +39,22 @@ final class Mixer {
       queue: .main
     ) { [weak self] _ in
       MainActor.assumeIsolated { self?.resume() }
+    }
+
+    // The play/pause key and the Now Playing controls reach whichever app last
+    // published Now Playing info, which updateNowPlaying() does on every play and stop.
+    let commands = MPRemoteCommandCenter.shared()
+    commands.togglePlayPauseCommand.addTarget { [weak self] _ in
+      self?.togglePlayback()
+      return .success
+    }
+    commands.playCommand.addTarget { [weak self] _ in
+      if self?.isPlaying == false { self?.togglePlayback() }
+      return .success
+    }
+    commands.pauseCommand.addTarget { [weak self] _ in
+      if self?.isPlaying == true { self?.togglePlayback() }
+      return .success
     }
 
     Task { await refreshCatalog() }
@@ -90,16 +107,29 @@ final class Mixer {
       }
     }
     channel.play()
+    updateNowPlaying()
   }
 
   private func stop(_ channel: Channel) {
     let fadeOut = channel.stop()
+    updateNowPlaying()
     Task {
       await fadeOut.value
       if !isPlaying, !channels.contains(where: \.isAudible) {
         engine.pause()
       }
     }
+  }
+
+  private func updateNowPlaying() {
+    let mix = isPlaying ? channels.filter(\.isOn) : channels.filter { savedMix.contains($0.id) }
+    let center = MPNowPlayingInfoCenter.default()
+    center.nowPlayingInfo = [
+      MPMediaItemPropertyTitle: mix.map(\.sound.name).formatted(.list(type: .and)),
+      MPMediaItemPropertyArtist: "Soundscape",
+      MPNowPlayingInfoPropertyIsLiveStream: true,
+    ]
+    center.playbackState = isPlaying ? .playing : .paused
   }
 
   private func resume() {
