@@ -27,6 +27,7 @@ swift scripts/render-banner.swift  # docs/banner.png, from the icon and the dark
 ## Rules
 
 - Never add Apple's audio files to the repo, and never put Apple's audio in anything published. The app plays the copies in `/System/Library/AssetsV2/com_apple_MobileAsset_ComfortSoundsAssets` and downloads the others into `~/Library/Application Support/Soundscape/Sounds`. The README's Legal section and the About panel credits in `SoundscapeApp.swift` describe this, so keep them accurate if it changes.
+- Versions follow semver: a minor release (1.1.0) for new features, a point release (1.1.1) for bug fixes. Bump `CURRENT_PROJECT_VERSION` by one with every release.
 - The updater trusts the GitHub release. Every release needs its `vX.Y.Z` tag, the zip from `scripts/build-release.sh` attached, and a `MARKETING_VERSION` that matches the tag, or the app refuses the update.
 - Keep scheduling on the audio clock. Segments are queued one ahead with sample times, so a late task wake-up can't cause a gap.
 - Verify UI changes by building the app and opening it. `scripts/screenshot.sh` renders the real views without touching your saved mix.
