@@ -14,7 +14,7 @@ A SwiftUI macOS app that mixes Apple's Background Sounds. No dependencies, no te
 Requirements: macOS 15 or later, Xcode 26 (the `.icon` needs it).
 
 ```bash
-scripts/build-release.sh           # universal Release build, dist/Soundscape-<version>.zip
+scripts/build-release.sh           # universal Release build, Developer ID sign + notarize when the cert is in the keychain, dist/Soundscape-<version>.zip
 open build/release/Release/Soundscape.app
 xcodegen generate                  # after editing project.yml
 swift scripts/render-icon.swift    # after editing the icon
@@ -31,5 +31,5 @@ swift scripts/render-banner.swift  # docs/banner.png, from the icon and the dark
 - The updater trusts the GitHub release. Every release needs its `vX.Y.Z` tag, the zip from `scripts/build-release.sh` attached, and a `MARKETING_VERSION` that matches the tag, or the app refuses the update.
 - Keep scheduling on the audio clock. Segments are queued one ahead with sample times, so a late task wake-up can't cause a gap.
 - Verify UI changes by building the app and opening it. `scripts/screenshot.sh` renders the real views without touching your saved mix.
-- The app isn't sandboxed and has no Developer ID. Releases are ad-hoc signed and not notarized.
+- Releases are signed with Flavio's Developer ID (team `DGFKNTAG99`) with the hardened runtime, and notarized inside `scripts/build-release.sh` when the certificate is in the keychain and a notarytool profile named `notary` is set up. CI and forks have no certificate, so the script signs ad-hoc there and skips notarization.
 - The 30-second demo video comes from the separate Remotion project `~/dev/soundscape-showreel`. It's not part of this repo. Its soundtrack uses synthesized stand-ins for the sounds, never Apple's audio.

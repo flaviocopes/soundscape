@@ -10,23 +10,13 @@ Read the announcement and watch the 30-second demo on my blog: [I built Soundsca
 
 ## Download
 
-Get `Soundscape-1.1.0.zip` from the [latest release](https://github.com/flaviocopes/soundscape/releases/latest), unzip it, and drag Soundscape to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
+Get `Soundscape-1.2.0.zip` from the [latest release](https://github.com/flaviocopes/soundscape/releases/latest), unzip it, and drag Soundscape to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
 
 ### Opening it the first time
 
-Soundscape isn't signed with an Apple Developer ID or notarized by Apple. So the first time you open it, macOS says it "could not verify Soundscape is free of malware". Click **Done**, then allow it in one of two ways.
+Soundscape is signed with my Apple Developer ID and notarized by Apple. The first time you open it, macOS asks if you're sure you want to open an app downloaded from the internet. Click **Open**.
 
-In System Settings, open **Privacy & Security** and scroll down to the message about Soundscape. Click **Open Anyway**, confirm, and open the app again. The button shows up for about an hour after you try to open the app.
-
-In Terminal, remove the quarantine flag macOS adds to downloaded files, then open the app:
-
-```sh
-xattr -dr com.apple.quarantine /Applications/Soundscape.app
-```
-
-The same command fixes a message saying Soundscape is damaged. You don't need to turn off Gatekeeper for either option.
-
-On a work laptop you might not be able to install apps in `/Applications`. You can keep Soundscape in the `Applications` folder inside your home folder, and run the command on `~/Applications/Soundscape.app`. If your company blocks apps that aren't notarized, ask your IT team.
+On a work laptop you might not be able to install apps in `/Applications`. You can keep Soundscape in the `Applications` folder inside your home folder instead.
 
 ## Features
 
@@ -83,7 +73,13 @@ Open `Soundscape.xcodeproj` and press `⌘R`. To build the release zip from the 
 scripts/build-release.sh
 ```
 
-It builds a universal app in `build/release/Release/Soundscape.app`, checks its signature, and zips it into `dist/`. The app is ad-hoc signed. A copy you build yourself opens without a warning.
+It builds a universal app in `build/release/Release/Soundscape.app` and zips it into `dist/`. With my Developer ID certificate in the keychain it signs and notarizes the app. Everywhere else it signs it ad hoc, so your copy is signed ad hoc. A copy you build yourself opens without a warning on your Mac.
+
+If you send it to another Mac, macOS says it "could not verify Soundscape is free of malware". Click **Done**, then go to **System Settings → Privacy & Security** and click **Open Anyway**, or remove the quarantine flag in Terminal:
+
+```sh
+xattr -dr com.apple.quarantine /Applications/Soundscape.app
+```
 
 ## Development
 
