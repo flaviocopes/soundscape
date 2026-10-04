@@ -1,6 +1,6 @@
 <img src="docs/banner.png" alt="Soundscape, a mixer for the Background Sounds built into your Mac" />
 
-Soundscape mixes the Background Sounds built into macOS. Turn on Rain, Fire and Night together, give each one its own volume, and control the mix from the menu bar.
+Soundscape mixes the Background Sounds built into macOS. Turn on Rain, Fire and Night together, give each one its own volume, and control the mix from the menu bar. There's an [Apple TV version](#apple-tv) too.
 
 Apple makes 16 of these sounds, from Balanced Noise to Rain on Roof, but macOS plays only one at a time. Soundscape plays as many as you want and loops each one without a gap.
 
@@ -10,7 +10,7 @@ Read the announcement and watch the 30-second demo on my blog: [I built Soundsca
 
 ## Download
 
-Get `Soundscape-1.2.0.zip` from the [latest release](https://github.com/flaviocopes/soundscape/releases/latest), unzip it, and drag Soundscape to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
+Get `Soundscape-1.3.0.zip` from the [latest release](https://github.com/flaviocopes/soundscape/releases/latest), unzip it, and drag Soundscape to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
 
 ### Opening it the first time
 
@@ -38,14 +38,35 @@ On a work laptop you might not be able to install apps in `/Applications`. You c
   <img src="docs/screenshot-light.png" alt="The Soundscape window playing Rain, Stream and Fire" />
 </picture>
 
+## Apple TV
+
+Soundscape runs on the Apple TV too, with the same 16 sounds and the same gapless crossfades:
+
+- Press a sound to turn it on or off. A sound that isn't on the Apple TV yet downloads first, then starts.
+- Hold a sound to set its volume.
+- The remote's play/pause button pauses and resumes the mix, in the app and from the home screen.
+- The mix keeps playing when you go back to the home screen or the screensaver starts.
+
+<img src="docs/screenshot-tv.png" alt="Soundscape on the Apple TV, with the 16 sounds in a grid" />
+
+The Apple TV can't install apps from a zip, and the App Store doesn't take apps that play Apple's sounds. So you install it from Xcode on your own Apple TV, which takes a few minutes the first time:
+
+1. Put the Mac and the Apple TV on the same network. On the Apple TV, open **Settings → Remotes and Devices → Remote App and Devices**.
+2. In Xcode, open **Window → Devices and Simulators**, click **Pair** next to your Apple TV, and type the code it shows.
+3. Open `Soundscape.xcodeproj`, choose the `SoundscapeTV` scheme and your Apple TV, and set your own team under **Signing & Capabilities**.
+4. Press `⌘R`.
+
+It needs tvOS 18 or later and an Apple Developer account. With a paid account, the app keeps working for a year. After that, run it from Xcode again.
+
 ## Where the sounds come from
 
 Soundscape doesn't include any audio. It plays the same files macOS uses for Background Sounds:
 
 - Sounds your Mac already has play right away, from `/System/Library/AssetsV2/com_apple_MobileAsset_ComfortSoundsAssets`.
 - The others download from Apple's servers when you click **Download**, into `~/Library/Application Support/Soundscape/Sounds`. Delete that folder to remove them.
+- On the Apple TV, every sound downloads from Apple's servers into the app's cache. tvOS empties it when it runs low on space, and the sound downloads again the next time you play it.
 
-The files come straight from Apple to your Mac. They never go through a server of mine.
+The files come straight from Apple to your device. They never go through a server of mine.
 
 ## Privacy
 
@@ -55,7 +76,7 @@ Soundscape goes online in three cases:
 - When you click **Download**, it downloads that sound from Apple.
 - Once a day, it asks GitHub whether there's a newer version of Soundscape. It downloads one only when you click **Install and Relaunch**.
 
-There are no accounts, and nothing about you or your mix leaves your Mac.
+There are no accounts, and nothing about you or your mix leaves your Mac. The Apple TV version does the first two and never checks for updates.
 
 To turn off the daily check, run this in Terminal. **Soundscape → Check for Updates…** still works.
 
@@ -89,7 +110,7 @@ The Xcode project is generated from `project.yml` with [XcodeGen](https://github
 xcodegen generate
 ```
 
-The app icon is drawn in code. Edit `scripts/render-icon.swift`, then write a new `Soundscape/AppIcon.icon`:
+The app icons are drawn in code. Edit `scripts/render-icon.swift`, then write a new `Soundscape/AppIcon.icon` and the Apple TV icon in `SoundscapeTV/Assets.xcassets`:
 
 ```sh
 swift scripts/render-icon.swift
@@ -119,9 +140,11 @@ Every sound gets two `AVAudioPlayerNode`s in one `AVAudioEngine`. Soundscape pic
 
 Soundscape is an independent project. It isn't affiliated with, endorsed by or sponsored by Apple.
 
-The Background Sounds belong to Apple. The repository, the source code and the release zip contain none of Apple's audio files. Soundscape plays the copies macOS installs, or downloads them from Apple's servers to your Mac, the same way macOS does. It doesn't host or redistribute them.
+The Background Sounds belong to Apple. The repository, the source code and the release zip contain none of Apple's audio files. Soundscape plays the copies macOS installs, or downloads them from Apple's servers to your device, the same way macOS does. It doesn't host or redistribute them.
 
 The sounds are part of macOS, so Apple's [macOS Software License Agreement](https://www.apple.com/legal/sla/) covers them, and using them within its terms is up to you. That means listening to them on a Mac you own or control. Don't copy the files off it, share them, or put them in videos, podcasts, streams or other projects.
+
+That license is written for Macs. tvOS doesn't come with Background Sounds, so the Apple TV version downloads the macOS ones, and the license doesn't cover playing them on an Apple TV. Whether you build and use the Apple TV version is your call.
 
 Apple can change or remove the sounds, and the servers they download from, at any time. If that happens, downloads in Soundscape stop working.
 

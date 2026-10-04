@@ -48,9 +48,15 @@ struct Sound: Identifiable {
 
 /// Finds the Background Sounds that macOS ships in its MobileAsset folder,
 /// and downloads the missing ones from Apple's CDN using the same catalog.
+/// tvOS has no system copies, so there every sound is a download.
 enum SoundLibrary {
   private static let systemFolder = URL(filePath: "/System/Library/AssetsV2/com_apple_MobileAsset_ComfortSoundsAssets")
+  #if os(macOS)
   private static let downloadsFolder = URL.applicationSupportDirectory.appending(path: "Soundscape/Sounds")
+  #else
+  // tvOS apps can only keep files in Caches, which the system empties when it runs low on space.
+  private static let downloadsFolder = URL.cachesDirectory.appending(path: "Sounds")
+  #endif
   private static let localCatalog = systemFolder.appending(path: "com_apple_MobileAsset_ComfortSoundsAssets.xml")
   // The local copy only lists the sounds this macOS version knows about. The live
   // catalog also has the newer ones, like the eight that arrived with Tahoe.
@@ -122,6 +128,7 @@ enum SoundLibrary {
     return try? PropertyListDecoder().decode(type, from: data)
   }
 
+  #if os(macOS)
   private static func unzip(_ zip: URL, to folder: URL) async throws {
     let process = Process()
     process.executableURL = URL(filePath: "/usr/bin/ditto")
@@ -142,6 +149,7 @@ enum SoundLibrary {
       }
     }
   }
+  #endif
 }
 
 private struct Catalog: Decodable {

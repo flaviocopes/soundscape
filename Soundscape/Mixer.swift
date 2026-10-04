@@ -41,6 +41,23 @@ final class Mixer {
       MainActor.assumeIsolated { self?.resume() }
     }
 
+    #if os(tvOS)
+    try? AVAudioSession.sharedInstance().setCategory(.playback)
+
+    // Siri or another app's audio stops the engine, so pause the mix to match.
+    _ = NotificationCenter.default.addObserver(
+      forName: AVAudioSession.interruptionNotification,
+      object: nil,
+      queue: .main
+    ) { [weak self] notification in
+      let type = notification.userInfo?[AVAudioSessionInterruptionTypeKey] as? UInt
+      guard type == AVAudioSession.InterruptionType.began.rawValue else { return }
+      MainActor.assumeIsolated {
+        if self?.isPlaying == true { self?.togglePlayback() }
+      }
+    }
+    #endif
+
     // The play/pause key and the Now Playing controls reach whichever app last
     // published Now Playing info, which updateNowPlaying() does on every play and stop.
     let commands = MPRemoteCommandCenter.shared()

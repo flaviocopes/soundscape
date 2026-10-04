@@ -3,11 +3,12 @@ options:
   bundleIdPrefix: com.flaviocopes
   deploymentTarget:
     macOS: "15.0"
+    tvOS: "18.0"
 settings:
   base:
     SWIFT_VERSION: "6.0"
-    MARKETING_VERSION: "1.2.0"
-    CURRENT_PROJECT_VERSION: "5"
+    MARKETING_VERSION: "1.3.0"
+    CURRENT_PROJECT_VERSION: "6"
 targets:
   Soundscape:
     type: application
@@ -22,3 +23,25 @@ targets:
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.music
         CODE_SIGN_IDENTITY: "-"
         CODE_SIGN_STYLE: Manual
+  SoundscapeTV:
+    type: application
+    platform: tvOS
+    sources:
+      - SoundscapeTV
+      - Soundscape/Sound.swift
+      - Soundscape/Channel.swift
+      - Soundscape/Mixer.swift
+    info:
+      path: SoundscapeTV/Info.plist
+      properties:
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UIBackgroundModes: [audio]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.flaviocopes.soundscape.tv
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Soundscape
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: DGFKNTAG99

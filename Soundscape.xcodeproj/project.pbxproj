@@ -7,20 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3A729EE4F6DA3796243B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C3FD1E74B2166FCA913B58 /* Assets.xcassets */; };
+		49F819FB2D2A3BA1119099B6 /* TVMixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457E20C0EF80ACB0307C6FD /* TVMixerView.swift */; };
+		4B9D7A19FEE23CF2267D505E /* Unzip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF36C22B809318AFE80D1C3 /* Unzip.swift */; };
+		4D3F0B94FB582C70BDB8A0BA /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1FA8AF9028DD28C80E4A3 /* Channel.swift */; };
 		523BA26967FC3211FDAA7796 /* Mixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA013BD0BD4AC61B407D1C /* Mixer.swift */; };
 		9C3C19348C86FD8A0F22395F /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587A8163B4ACE892353AF0B /* Sound.swift */; };
 		9FCE4E0A2D6E6C4EA06EF1E3 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = A77878D87178D856D5B1D209 /* AppIcon.icon */; };
+		AD0B12F606C93C0D35F9B9B2 /* SoundscapeTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F78FB5D23EF03FA53B0879 /* SoundscapeTVApp.swift */; };
 		B57949E37AA8C69C9AD2A7F7 /* AppUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78749DFC70DBF6648009000B /* AppUpdater.swift */; };
 		B83773D14F0224956241808D /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1FA8AF9028DD28C80E4A3 /* Channel.swift */; };
 		C410DF2ADCF8ABACD10CA889 /* MixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A970A72139D0F22CE1501C /* MixerView.swift */; };
 		DA4305B4679A4644EBA95525 /* SoundscapeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E5B30CE963B26EC01C534 /* SoundscapeApp.swift */; };
+		E41D5538C5A81CE060D19166 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587A8163B4ACE892353AF0B /* Sound.swift */; };
+		EE4C0B7CE333BF1A658BB0D9 /* Mixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA013BD0BD4AC61B407D1C /* Mixer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05D68F5594D16F74EA2535CB /* SoundscapeTV.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SoundscapeTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1369AAA1828A6BB9BFE3C34A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		20C3FD1E74B2166FCA913B58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27A970A72139D0F22CE1501C /* MixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerView.swift; sourceTree = "<group>"; };
 		3EE1FA8AF9028DD28C80E4A3 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		4DCA013BD0BD4AC61B407D1C /* Mixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mixer.swift; sourceTree = "<group>"; };
+		5AF36C22B809318AFE80D1C3 /* Unzip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unzip.swift; sourceTree = "<group>"; };
+		6457E20C0EF80ACB0307C6FD /* TVMixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMixerView.swift; sourceTree = "<group>"; };
 		78749DFC70DBF6648009000B /* AppUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdater.swift; sourceTree = "<group>"; };
+		84F78FB5D23EF03FA53B0879 /* SoundscapeTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundscapeTVApp.swift; sourceTree = "<group>"; };
 		92A44F961E838C9C2950B26E /* Soundscape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soundscape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77878D87178D856D5B1D209 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		B587A8163B4ACE892353AF0B /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
@@ -46,14 +59,28 @@
 			isa = PBXGroup;
 			children = (
 				92A44F961E838C9C2950B26E /* Soundscape.app */,
+				05D68F5594D16F74EA2535CB /* SoundscapeTV.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		32915DFDE0EECF40A37B6229 /* SoundscapeTV */ = {
+			isa = PBXGroup;
+			children = (
+				20C3FD1E74B2166FCA913B58 /* Assets.xcassets */,
+				1369AAA1828A6BB9BFE3C34A /* Info.plist */,
+				84F78FB5D23EF03FA53B0879 /* SoundscapeTVApp.swift */,
+				6457E20C0EF80ACB0307C6FD /* TVMixerView.swift */,
+				5AF36C22B809318AFE80D1C3 /* Unzip.swift */,
+			);
+			path = SoundscapeTV;
 			sourceTree = "<group>";
 		};
 		F99D5CCE60E7E561833CED0E = {
 			isa = PBXGroup;
 			children = (
 				098B46AA2F94D9C4C40600F1 /* Soundscape */,
+				32915DFDE0EECF40A37B6229 /* SoundscapeTV */,
 				2DC15DDB54BFE2261BAECDC2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +88,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3709CDBD0114A4251A069755 /* SoundscapeTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34B9CD632A7AC487D0C6494E /* Build configuration list for PBXNativeTarget "SoundscapeTV" */;
+			buildPhases = (
+				91FB6A7A6EAF209991A053DA /* Sources */,
+				991120FE947ABC407C13D694 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundscapeTV;
+			packageProductDependencies = (
+			);
+			productName = SoundscapeTV;
+			productReference = 05D68F5594D16F74EA2535CB /* SoundscapeTV.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8730F003532CCFAD97E63E2E /* Soundscape */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3EF14342851B70FB61F4D2B /* Build configuration list for PBXNativeTarget "Soundscape" */;
@@ -88,6 +133,10 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					3709CDBD0114A4251A069755 = {
+						DevelopmentTeam = DGFKNTAG99;
+						ProvisioningStyle = Automatic;
+					};
 					8730F003532CCFAD97E63E2E = {
 						ProvisioningStyle = Manual;
 					};
@@ -108,11 +157,20 @@
 			projectRoot = "";
 			targets = (
 				8730F003532CCFAD97E63E2E /* Soundscape */,
+				3709CDBD0114A4251A069755 /* SoundscapeTV */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		991120FE947ABC407C13D694 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D3A729EE4F6DA3796243B5D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6580960BA0BE597FE659CA4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +182,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		91FB6A7A6EAF209991A053DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D3F0B94FB582C70BDB8A0BA /* Channel.swift in Sources */,
+				EE4C0B7CE333BF1A658BB0D9 /* Mixer.swift in Sources */,
+				E41D5538C5A81CE060D19166 /* Sound.swift in Sources */,
+				AD0B12F606C93C0D35F9B9B2 /* SoundscapeTVApp.swift in Sources */,
+				49F819FB2D2A3BA1119099B6 /* TVMixerView.swift in Sources */,
+				4B9D7A19FEE23CF2267D505E /* Unzip.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEC71404EA82473677F84D75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,6 +211,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		3C699BEF172E04F5C9A91334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DGFKNTAG99;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SoundscapeTV/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Soundscape;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.soundscape.tv;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
 		3D1048632F98DA7269EF81F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -193,7 +284,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -206,14 +297,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 6.0;
+				TVOS_DEPLOYMENT_TARGET = 18.0;
 			};
 			name = Release;
 		};
@@ -251,7 +342,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -270,15 +361,15 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
+				TVOS_DEPLOYMENT_TARGET = 18.0;
 			};
 			name = Debug;
 		};
@@ -301,9 +392,38 @@
 			};
 			name = Debug;
 		};
+		D8C0FDB672201F826ED32B16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DGFKNTAG99;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SoundscapeTV/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Soundscape;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.soundscape.tv;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		34B9CD632A7AC487D0C6494E /* Build configuration list for PBXNativeTarget "SoundscapeTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8C0FDB672201F826ED32B16 /* Debug */,
+				3C699BEF172E04F5C9A91334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		97B3323A7D203F3A0CC9B474 /* Build configuration list for PBXProject "Soundscape" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
