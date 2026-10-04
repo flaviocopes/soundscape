@@ -38,7 +38,7 @@ For a look without the TV, boot a tvOS simulator headless with `xcrun simctl boo
 ## Rules
 
 - Never add Apple's audio files to the repo, and never put Apple's audio in anything published. The app plays the copies in `/System/Library/AssetsV2/com_apple_MobileAsset_ComfortSoundsAssets` and downloads the others into `~/Library/Application Support/Soundscape/Sounds`. The Apple TV app downloads every sound into its Caches folder. The README's Legal section and the About panel credits in `SoundscapeApp.swift` describe this, so keep them accurate if it changes.
-- The Apple TV app has no binary release. The App Store won't take it and tvOS can't sideload, so people build it from Xcode, as the README's Apple TV section explains. Releases ship the Mac zip only, and `scripts/build-release.sh` and CI build only the Mac target.
+- The Apple TV app is an experiment, and everything public says so (the README, release notes, the site listing): the sounds are the property of Apple Inc., and tvOS doesn't ship them. It has no binary release. The App Store won't take it and tvOS can't sideload, so people build it from Xcode, as the README's Apple TV section explains. Releases ship the Mac zip only, and `scripts/build-release.sh` and CI build only the Mac target.
 - Versions follow semver: a minor release (1.1.0) for new features, a point release (1.1.1) for bug fixes. Bump `CURRENT_PROJECT_VERSION` by one with every release.
 - The updater trusts the GitHub release. Every release needs its `vX.Y.Z` tag, the zip from `scripts/build-release.sh` attached, and a `MARKETING_VERSION` that matches the tag, or the app refuses the update.
 - Keep scheduling on the audio clock. Segments are queued one ahead with sample times, so a late task wake-up can't cause a gap.

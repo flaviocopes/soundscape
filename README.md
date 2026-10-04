@@ -1,6 +1,6 @@
 <img src="docs/banner.png" alt="Soundscape, a mixer for the Background Sounds built into your Mac" />
 
-Soundscape mixes the Background Sounds built into macOS. Turn on Rain, Fire and Night together, give each one its own volume, and control the mix from the menu bar. There's an [Apple TV version](#apple-tv) too.
+Soundscape mixes the Background Sounds built into macOS. Turn on Rain, Fire and Night together, give each one its own volume, and control the mix from the menu bar. There's an experimental [Apple TV version](#apple-tv) too.
 
 Apple makes 16 of these sounds, from Balanced Noise to Rain on Roof, but macOS plays only one at a time. Soundscape plays as many as you want and loops each one without a gap.
 
@@ -40,7 +40,9 @@ On a work laptop you might not be able to install apps in `/Applications`. You c
 
 ## Apple TV
 
-Soundscape runs on the Apple TV too, with the same 16 sounds and the same gapless crossfades:
+The Apple TV version is an experiment. The sounds are the property of Apple Inc., and Apple doesn't ship them with tvOS, so read the [Legal](#legal) section before you build it.
+
+It has the same 16 sounds and the same gapless crossfades as the Mac app:
 
 - Press a sound to turn it on or off. A sound that isn't on the Apple TV yet downloads first, then starts.
 - Hold a sound to set its volume.
@@ -144,7 +146,7 @@ The Background Sounds belong to Apple. The repository, the source code and the r
 
 The sounds are part of macOS, so Apple's [macOS Software License Agreement](https://www.apple.com/legal/sla/) covers them, and using them within its terms is up to you. That means listening to them on a Mac you own or control. Don't copy the files off it, share them, or put them in videos, podcasts, streams or other projects.
 
-That license is written for Macs. tvOS doesn't come with Background Sounds, so the Apple TV version downloads the macOS ones, and the license doesn't cover playing them on an Apple TV. Whether you build and use the Apple TV version is your call.
+The Apple TV version is an experiment. The sounds are the property of Apple Inc., and the license that covers them is written for Macs. tvOS doesn't come with Background Sounds, so the Apple TV version downloads the macOS ones, and the license doesn't cover playing them on an Apple TV. Whether you build and use it is your call.
 
 Apple can change or remove the sounds, and the servers they download from, at any time. If that happens, downloads in Soundscape stop working.
 
