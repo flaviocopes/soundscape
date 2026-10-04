@@ -34,7 +34,7 @@ xcrun devicectl device install app --device <devicectl id> build/tv-device/Build
 xcrun devicectl device process launch --terminate-existing --device <devicectl id> com.flaviocopes.soundscape.tv
 ```
 
-The iPhone/iPad app installs the same way with the `SoundscapeiOS` scheme, `Debug-iphoneos` and `com.flaviocopes.soundscape.ios`. Flavio's iPhone is connected by cable and has Developer Mode on. `devicectl` can't launch the app while the phone is locked, so then ask him to open it.
+The iPhone/iPad app installs the same way with the `SoundscapeiOS` scheme, `Debug-iphoneos` and `com.flaviocopes.soundscape.ios`. Flavio's iPhone 16 Pro has Developer Mode on and installs over Wi-Fi, no cable needed: `-destination 'platform=iOS,name=iPhone 16 Pro'` and `--device "iPhone 16 Pro"` find it by name. `devicectl` can't launch the app while the phone is locked, so then ask him to open it.
 
 For a look without the device, boot a simulator headless with `xcrun simctl boot "<device name>"`, install with `simctl install booted` and capture with `simctl io booted screenshot`. No window opens. A fresh simulator can fail the first install with an IXErrorDomain promise error, so retry it after a few seconds. The simulator can read this Mac's `/System` sounds, so it shows sounds as ready that a real device has to download. `docs/screenshot-tv.png` and `docs/screenshot-iphone.png` come from it, launched with `-AppleLocale en_US -AppleLanguages "(en)"`.
 
