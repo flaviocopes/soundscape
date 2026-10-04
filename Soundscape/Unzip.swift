@@ -2,8 +2,8 @@ import Compression
 import Foundation
 
 extension SoundLibrary {
-  /// tvOS has no `ditto`, so this reads the zip itself. Apple's zips leave the sizes
-  /// out of the local headers, so it walks the central directory at the end instead.
+  /// iOS and tvOS apps can't run `ditto`, so every platform reads the zip itself. Apple's zips
+  /// leave the sizes out of the local headers, so it walks the central directory at the end instead.
   static func unzip(_ zip: URL, to folder: URL) async throws {
     let data = try Data(contentsOf: zip, options: .alwaysMapped)
     let corrupt = CocoaError(.fileReadCorruptFile)

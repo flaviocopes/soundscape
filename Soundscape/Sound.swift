@@ -48,14 +48,14 @@ struct Sound: Identifiable {
 
 /// Finds the Background Sounds that macOS ships in its MobileAsset folder,
 /// and downloads the missing ones from Apple's CDN using the same catalog.
-/// tvOS has no system copies, so there every sound is a download.
+/// iOS and tvOS apps can't read the system copies, so there every sound is a download.
 enum SoundLibrary {
   private static let systemFolder = URL(filePath: "/System/Library/AssetsV2/com_apple_MobileAsset_ComfortSoundsAssets")
-  #if os(macOS)
-  private static let downloadsFolder = URL.applicationSupportDirectory.appending(path: "Soundscape/Sounds")
-  #else
+  #if os(tvOS)
   // tvOS apps can only keep files in Caches, which the system empties when it runs low on space.
   private static let downloadsFolder = URL.cachesDirectory.appending(path: "Sounds")
+  #else
+  private static let downloadsFolder = URL.applicationSupportDirectory.appending(path: "Soundscape/Sounds")
   #endif
   private static let localCatalog = systemFolder.appending(path: "com_apple_MobileAsset_ComfortSoundsAssets.xml")
   // The local copy only lists the sounds this macOS version knows about. The live
@@ -127,29 +127,6 @@ enum SoundLibrary {
     guard let data = try? Data(contentsOf: url) else { return nil }
     return try? PropertyListDecoder().decode(type, from: data)
   }
-
-  #if os(macOS)
-  private static func unzip(_ zip: URL, to folder: URL) async throws {
-    let process = Process()
-    process.executableURL = URL(filePath: "/usr/bin/ditto")
-    process.arguments = ["-x", "-k", zip.path, folder.path]
-
-    try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, any Error>) in
-      process.terminationHandler = { process in
-        if process.terminationStatus == 0 {
-          continuation.resume()
-        } else {
-          continuation.resume(throwing: CocoaError(.fileReadCorruptFile))
-        }
-      }
-      do {
-        try process.run()
-      } catch {
-        continuation.resume(throwing: error)
-      }
-    }
-  }
-  #endif
 }
 
 private struct Catalog: Decodable {

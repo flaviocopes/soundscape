@@ -142,7 +142,7 @@ let manifest = """
     }
   ],
   "supported-platforms" : {
-    "squares" : ["macOS"]
+    "squares" : "shared"
   }
 }
 

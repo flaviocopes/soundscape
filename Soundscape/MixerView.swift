@@ -124,6 +124,7 @@ struct ChannelTile: View {
   }
 }
 
+#if os(macOS)
 struct MenuBarContent: View {
   @Environment(\.openWindow) private var openWindow
 
@@ -148,3 +149,4 @@ struct MenuBarContent: View {
     .frame(width: 372)
   }
 }
+#endif

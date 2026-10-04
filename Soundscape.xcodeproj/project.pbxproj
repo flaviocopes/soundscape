@@ -8,36 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		0D3A729EE4F6DA3796243B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C3FD1E74B2166FCA913B58 /* Assets.xcassets */; };
+		127E3752DFE9BFF0C58E2741 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587A8163B4ACE892353AF0B /* Sound.swift */; };
+		188302C6EA21B123984CAC7F /* Mixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA013BD0BD4AC61B407D1C /* Mixer.swift */; };
+		1C6E0F91CE7E21B281636F68 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = A77878D87178D856D5B1D209 /* AppIcon.icon */; };
+		23FA79A37E9B3A9B792534EF /* SoundscapeiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90418AE9474204E924F4327 /* SoundscapeiOSApp.swift */; };
+		37F8AEF80AEC362EE6907A31 /* MixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A970A72139D0F22CE1501C /* MixerView.swift */; };
 		49F819FB2D2A3BA1119099B6 /* TVMixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457E20C0EF80ACB0307C6FD /* TVMixerView.swift */; };
-		4B9D7A19FEE23CF2267D505E /* Unzip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF36C22B809318AFE80D1C3 /* Unzip.swift */; };
 		4D3F0B94FB582C70BDB8A0BA /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1FA8AF9028DD28C80E4A3 /* Channel.swift */; };
 		523BA26967FC3211FDAA7796 /* Mixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA013BD0BD4AC61B407D1C /* Mixer.swift */; };
+		7E60164A02638A13E39FF71C /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1FA8AF9028DD28C80E4A3 /* Channel.swift */; };
 		9C3C19348C86FD8A0F22395F /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587A8163B4ACE892353AF0B /* Sound.swift */; };
 		9FCE4E0A2D6E6C4EA06EF1E3 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = A77878D87178D856D5B1D209 /* AppIcon.icon */; };
 		AD0B12F606C93C0D35F9B9B2 /* SoundscapeTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F78FB5D23EF03FA53B0879 /* SoundscapeTVApp.swift */; };
 		B57949E37AA8C69C9AD2A7F7 /* AppUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78749DFC70DBF6648009000B /* AppUpdater.swift */; };
 		B83773D14F0224956241808D /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1FA8AF9028DD28C80E4A3 /* Channel.swift */; };
 		C410DF2ADCF8ABACD10CA889 /* MixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A970A72139D0F22CE1501C /* MixerView.swift */; };
+		D7BC3CA5EE7C728C4BAD968E /* Unzip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26926FC456A453FCEDA1B019 /* Unzip.swift */; };
 		DA4305B4679A4644EBA95525 /* SoundscapeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E5B30CE963B26EC01C534 /* SoundscapeApp.swift */; };
 		E41D5538C5A81CE060D19166 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587A8163B4ACE892353AF0B /* Sound.swift */; };
+		E5161E716380A46B44FAB912 /* Unzip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26926FC456A453FCEDA1B019 /* Unzip.swift */; };
 		EE4C0B7CE333BF1A658BB0D9 /* Mixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA013BD0BD4AC61B407D1C /* Mixer.swift */; };
+		EF3674B4E5DD9E9AC9685FB2 /* Unzip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26926FC456A453FCEDA1B019 /* Unzip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05D68F5594D16F74EA2535CB /* SoundscapeTV.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SoundscapeTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1369AAA1828A6BB9BFE3C34A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		20C3FD1E74B2166FCA913B58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26926FC456A453FCEDA1B019 /* Unzip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unzip.swift; sourceTree = "<group>"; };
 		27A970A72139D0F22CE1501C /* MixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerView.swift; sourceTree = "<group>"; };
 		3EE1FA8AF9028DD28C80E4A3 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		4DCA013BD0BD4AC61B407D1C /* Mixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mixer.swift; sourceTree = "<group>"; };
-		5AF36C22B809318AFE80D1C3 /* Unzip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unzip.swift; sourceTree = "<group>"; };
 		6457E20C0EF80ACB0307C6FD /* TVMixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMixerView.swift; sourceTree = "<group>"; };
+		6C73FAFCCB8460DF09746F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		78749DFC70DBF6648009000B /* AppUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdater.swift; sourceTree = "<group>"; };
 		84F78FB5D23EF03FA53B0879 /* SoundscapeTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundscapeTVApp.swift; sourceTree = "<group>"; };
 		92A44F961E838C9C2950B26E /* Soundscape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soundscape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77878D87178D856D5B1D209 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		B587A8163B4ACE892353AF0B /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		D01E5B30CE963B26EC01C534 /* SoundscapeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundscapeApp.swift; sourceTree = "<group>"; };
+		E2F519E52104C8D0713A8B6A /* SoundscapeiOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SoundscapeiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F90418AE9474204E924F4327 /* SoundscapeiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundscapeiOSApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -51,6 +62,7 @@
 				27A970A72139D0F22CE1501C /* MixerView.swift */,
 				B587A8163B4ACE892353AF0B /* Sound.swift */,
 				D01E5B30CE963B26EC01C534 /* SoundscapeApp.swift */,
+				26926FC456A453FCEDA1B019 /* Unzip.swift */,
 			);
 			path = Soundscape;
 			sourceTree = "<group>";
@@ -59,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				92A44F961E838C9C2950B26E /* Soundscape.app */,
+				E2F519E52104C8D0713A8B6A /* SoundscapeiOS.app */,
 				05D68F5594D16F74EA2535CB /* SoundscapeTV.app */,
 			);
 			name = Products;
@@ -71,15 +84,24 @@
 				1369AAA1828A6BB9BFE3C34A /* Info.plist */,
 				84F78FB5D23EF03FA53B0879 /* SoundscapeTVApp.swift */,
 				6457E20C0EF80ACB0307C6FD /* TVMixerView.swift */,
-				5AF36C22B809318AFE80D1C3 /* Unzip.swift */,
 			);
 			path = SoundscapeTV;
+			sourceTree = "<group>";
+		};
+		BF55ABDB05927FE5D941B8B3 /* SoundscapeiOS */ = {
+			isa = PBXGroup;
+			children = (
+				6C73FAFCCB8460DF09746F44 /* Info.plist */,
+				F90418AE9474204E924F4327 /* SoundscapeiOSApp.swift */,
+			);
+			path = SoundscapeiOS;
 			sourceTree = "<group>";
 		};
 		F99D5CCE60E7E561833CED0E = {
 			isa = PBXGroup;
 			children = (
 				098B46AA2F94D9C4C40600F1 /* Soundscape */,
+				BF55ABDB05927FE5D941B8B3 /* SoundscapeiOS */,
 				32915DFDE0EECF40A37B6229 /* SoundscapeTV */,
 				2DC15DDB54BFE2261BAECDC2 /* Products */,
 			);
@@ -104,6 +126,24 @@
 			);
 			productName = SoundscapeTV;
 			productReference = 05D68F5594D16F74EA2535CB /* SoundscapeTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38ACE58BFDAF5A4BDA3279A5 /* SoundscapeiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50565FF59201D7D1FAFF1DB4 /* Build configuration list for PBXNativeTarget "SoundscapeiOS" */;
+			buildPhases = (
+				657EFDDEBEEC3C6B2F52D763 /* Sources */,
+				1A6165989BDF283C23EF8312 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundscapeiOS;
+			packageProductDependencies = (
+			);
+			productName = SoundscapeiOS;
+			productReference = E2F519E52104C8D0713A8B6A /* SoundscapeiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8730F003532CCFAD97E63E2E /* Soundscape */ = {
@@ -137,6 +177,10 @@
 						DevelopmentTeam = DGFKNTAG99;
 						ProvisioningStyle = Automatic;
 					};
+					38ACE58BFDAF5A4BDA3279A5 = {
+						DevelopmentTeam = DGFKNTAG99;
+						ProvisioningStyle = Automatic;
+					};
 					8730F003532CCFAD97E63E2E = {
 						ProvisioningStyle = Manual;
 					};
@@ -158,11 +202,20 @@
 			targets = (
 				8730F003532CCFAD97E63E2E /* Soundscape */,
 				3709CDBD0114A4251A069755 /* SoundscapeTV */,
+				38ACE58BFDAF5A4BDA3279A5 /* SoundscapeiOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1A6165989BDF283C23EF8312 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C6E0F91CE7E21B281636F68 /* AppIcon.icon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		991120FE947ABC407C13D694 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,6 +235,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		657EFDDEBEEC3C6B2F52D763 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E60164A02638A13E39FF71C /* Channel.swift in Sources */,
+				188302C6EA21B123984CAC7F /* Mixer.swift in Sources */,
+				37F8AEF80AEC362EE6907A31 /* MixerView.swift in Sources */,
+				127E3752DFE9BFF0C58E2741 /* Sound.swift in Sources */,
+				23FA79A37E9B3A9B792534EF /* SoundscapeiOSApp.swift in Sources */,
+				E5161E716380A46B44FAB912 /* Unzip.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		91FB6A7A6EAF209991A053DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,7 +257,7 @@
 				E41D5538C5A81CE060D19166 /* Sound.swift in Sources */,
 				AD0B12F606C93C0D35F9B9B2 /* SoundscapeTVApp.swift in Sources */,
 				49F819FB2D2A3BA1119099B6 /* TVMixerView.swift in Sources */,
-				4B9D7A19FEE23CF2267D505E /* Unzip.swift in Sources */,
+				D7BC3CA5EE7C728C4BAD968E /* Unzip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,12 +271,36 @@
 				C410DF2ADCF8ABACD10CA889 /* MixerView.swift in Sources */,
 				9C3C19348C86FD8A0F22395F /* Sound.swift in Sources */,
 				DA4305B4679A4644EBA95525 /* SoundscapeApp.swift in Sources */,
+				EF3674B4E5DD9E9AC9685FB2 /* Unzip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		00F3D278CF018E1A14962FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DGFKNTAG99;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SoundscapeiOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Soundscape;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.soundscape.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		3C699BEF172E04F5C9A91334 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -296,6 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.3.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -360,6 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.3.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -412,6 +504,29 @@
 			};
 			name = Debug;
 		};
+		E33F1AE7589B13C32E164EA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DGFKNTAG99;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SoundscapeiOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Soundscape;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.soundscape.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -420,6 +535,15 @@
 			buildConfigurations = (
 				D8C0FDB672201F826ED32B16 /* Debug */,
 				3C699BEF172E04F5C9A91334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		50565FF59201D7D1FAFF1DB4 /* Build configuration list for PBXNativeTarget "SoundscapeiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F3D278CF018E1A14962FD3 /* Debug */,
+				E33F1AE7589B13C32E164EA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

@@ -1,6 +1,6 @@
 <img src="docs/banner.png" alt="Soundscape, a mixer for the Background Sounds built into your Mac" />
 
-Soundscape mixes the Background Sounds built into macOS. Turn on Rain, Fire and Night together, give each one its own volume, and control the mix from the menu bar. There's an experimental [Apple TV version](#apple-tv) too.
+Soundscape mixes the Background Sounds built into macOS. Turn on Rain, Fire and Night together, give each one its own volume, and control the mix from the menu bar. It runs on [iPhone and iPad](#iphone-and-ipad) too, and there's an experimental [Apple TV version](#apple-tv).
 
 Apple makes 16 of these sounds, from Balanced Noise to Rain on Roof, but macOS plays only one at a time. Soundscape plays as many as you want and loops each one without a gap.
 
@@ -38,6 +38,20 @@ On a work laptop you might not be able to install apps in `/Applications`. You c
   <img src="docs/screenshot-light.png" alt="The Soundscape window playing Rain, Stream and Fire" />
 </picture>
 
+## iPhone and iPad
+
+The iPhone and iPad app has the same screen as the Mac window: tap a sound's name to turn it on, set its volume with its slider, and download the sounds you don't have yet with one tap. The mix keeps playing when you lock the screen, and the lock screen and Control Center show it with a play/pause button. A call or Siri pauses it, and **Play** brings it back.
+
+<img src="docs/screenshot-iphone.png" width="276" alt="Soundscape on an iPhone, with the sounds in two columns" />
+
+It isn't on the App Store, so you install it from Xcode:
+
+1. Connect the iPhone or iPad to your Mac with a cable and unlock it.
+2. Open `Soundscape.xcodeproj`, choose the `SoundscapeiOS` scheme and your device, and set your own team under **Signing & Capabilities**.
+3. Press `⌘R`. The first time, Xcode says Developer Mode is off. On the device, turn on **Settings → Privacy & Security → Developer Mode**, which shows up only after that first try, let it restart, and press `⌘R` again.
+
+It needs iOS 18 or iPadOS 18 or later. With a free Apple account the app stops opening after 7 days, and with the paid Apple Developer Program after a year. Then run it from Xcode again.
+
 ## Apple TV
 
 The Apple TV version is an experiment. The sounds are the property of Apple Inc., and Apple doesn't ship them with tvOS, so read the [Legal](#legal) section before you build it.
@@ -66,6 +80,7 @@ Soundscape doesn't include any audio. It plays the same files macOS uses for Bac
 
 - Sounds your Mac already has play right away, from `/System/Library/AssetsV2/com_apple_MobileAsset_ComfortSoundsAssets`.
 - The others download from Apple's servers when you click **Download**, into `~/Library/Application Support/Soundscape/Sounds`. Delete that folder to remove them.
+- On iPhone and iPad, apps can't read the copies iOS installs, so every sound downloads from Apple's servers into the app's own storage. Deleting the app removes them.
 - On the Apple TV, every sound downloads from Apple's servers into the app's cache. tvOS empties it when it runs low on space, and the sound downloads again the next time you play it.
 
 The files come straight from Apple to your device. They never go through a server of mine.
@@ -78,7 +93,7 @@ Soundscape goes online in three cases:
 - When you click **Download**, it downloads that sound from Apple.
 - Once a day, it asks GitHub whether there's a newer version of Soundscape. It downloads one only when you click **Install and Relaunch**.
 
-There are no accounts, and nothing about you or your mix leaves your Mac. The Apple TV version does the first two and never checks for updates.
+There are no accounts, and nothing about you or your mix leaves your Mac. The iPhone, iPad and Apple TV versions do the first two and never check for updates.
 
 To turn off the daily check, run this in Terminal. **Soundscape → Check for Updates…** still works.
 
@@ -112,7 +127,7 @@ The Xcode project is generated from `project.yml` with [XcodeGen](https://github
 xcodegen generate
 ```
 
-The app icons are drawn in code. Edit `scripts/render-icon.swift`, then write a new `Soundscape/AppIcon.icon` and the Apple TV icon in `SoundscapeTV/Assets.xcassets`:
+The app icons are drawn in code. Edit `scripts/render-icon.swift`, then write a new `Soundscape/AppIcon.icon`, which the Mac, iPhone and iPad share, and the Apple TV icon in `SoundscapeTV/Assets.xcassets`:
 
 ```sh
 swift scripts/render-icon.swift
@@ -142,11 +157,13 @@ Every sound gets two `AVAudioPlayerNode`s in one `AVAudioEngine`. Soundscape pic
 
 Soundscape is an independent project. It isn't affiliated with, endorsed by or sponsored by Apple.
 
-The Background Sounds belong to Apple. The repository, the source code and the release zip contain none of Apple's audio files. Soundscape plays the copies macOS installs, or downloads them from Apple's servers to your device, the same way macOS does. It doesn't host or redistribute them.
+The Background Sounds belong to Apple. The repository, the source code and the release zip contain none of Apple's audio files. Soundscape plays the copies macOS installs, or downloads them from Apple's servers to your device, the same way macOS and iOS do. It doesn't host or redistribute them.
 
-The sounds are part of macOS, so Apple's [macOS Software License Agreement](https://www.apple.com/legal/sla/) covers them, and using them within its terms is up to you. That means listening to them on a Mac you own or control. Don't copy the files off it, share them, or put them in videos, podcasts, streams or other projects.
+The sounds are part of macOS, iOS and iPadOS, so Apple's [software license agreements](https://www.apple.com/legal/sla/) for them cover the sounds, and using them within their terms is up to you. That means listening to them on a Mac, iPhone or iPad you own or control. Don't copy the files off it, share them, or put them in videos, podcasts, streams or other projects.
 
-The Apple TV version is an experiment. The sounds are the property of Apple Inc., and the license that covers them is written for Macs. tvOS doesn't come with Background Sounds, so the Apple TV version downloads the macOS ones, and the license doesn't cover playing them on an Apple TV. Whether you build and use it is your call.
+iPhone and iPad come with these same Background Sounds, in **Settings → Accessibility → Audio & Visual → Background Sounds**, and Apple's catalog for iOS lists the same files as the one for macOS. So on those devices Soundscape plays sounds that are already part of iOS.
+
+The Apple TV version is an experiment. The sounds are the property of Apple Inc., and the licenses that cover them are written for Macs, iPhones and iPads. tvOS doesn't come with Background Sounds, so the Apple TV version downloads the macOS ones, and the license doesn't cover playing them on an Apple TV. Whether you build and use it is your call.
 
 Apple can change or remove the sounds, and the servers they download from, at any time. If that happens, downloads in Soundscape stop working.
 

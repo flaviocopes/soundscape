@@ -3,6 +3,7 @@ options:
   bundleIdPrefix: com.flaviocopes
   deploymentTarget:
     macOS: "15.0"
+    iOS: "18.0"
     tvOS: "18.0"
 settings:
   base:
@@ -29,6 +30,7 @@ targets:
     sources:
       - SoundscapeTV
       - Soundscape/Sound.swift
+      - Soundscape/Unzip.swift
       - Soundscape/Channel.swift
       - Soundscape/Mixer.swift
     info:
@@ -43,5 +45,34 @@ targets:
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_CFBundleDisplayName: Soundscape
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: DGFKNTAG99
+  SoundscapeiOS:
+    type: application
+    platform: iOS
+    sources:
+      - SoundscapeiOS
+      - Soundscape/Sound.swift
+      - Soundscape/Unzip.swift
+      - Soundscape/Channel.swift
+      - Soundscape/Mixer.swift
+      - Soundscape/MixerView.swift
+      - Soundscape/AppIcon.icon
+    info:
+      path: SoundscapeiOS/Info.plist
+      properties:
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UIBackgroundModes: [audio]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.flaviocopes.soundscape.ios
+        TARGETED_DEVICE_FAMILY: "1,2"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Soundscape
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: DGFKNTAG99

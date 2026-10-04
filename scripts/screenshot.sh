@@ -11,7 +11,7 @@ rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$ROOT/docs"
 swiftc -O -swift-version 6 -parse-as-library -target arm64-apple-macos15.0 \
   "$ROOT"/Soundscape/Channel.swift "$ROOT"/Soundscape/Mixer.swift \
-  "$ROOT"/Soundscape/MixerView.swift "$ROOT"/Soundscape/Sound.swift \
+  "$ROOT"/Soundscape/MixerView.swift "$ROOT"/Soundscape/Sound.swift "$ROOT"/Soundscape/Unzip.swift \
   "$ROOT"/scripts/screenshot.swift -o "$APP/Contents/MacOS/Screenshot"
 
 cat > "$APP/Contents/Info.plist" <<'PLIST'

@@ -41,10 +41,10 @@ final class Mixer {
       MainActor.assumeIsolated { self?.resume() }
     }
 
-    #if os(tvOS)
+    #if !os(macOS)
     try? AVAudioSession.sharedInstance().setCategory(.playback)
 
-    // Siri or another app's audio stops the engine, so pause the mix to match.
+    // A call, Siri or another app's audio stops the engine, so pause the mix to match.
     _ = NotificationCenter.default.addObserver(
       forName: AVAudioSession.interruptionNotification,
       object: nil,
