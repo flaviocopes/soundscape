@@ -138,7 +138,7 @@ struct MenuBarContent: View {
           NSApp.activate()
         }
         Spacer()
-        Button("Quit Soundscape") {
+        Button("Quit Tranquillity Maker") {
           NSApp.terminate(nil)
         }
       }

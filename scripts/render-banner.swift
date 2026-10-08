@@ -7,7 +7,7 @@
 import AppKit
 import SwiftUI
 
-let name = "Soundscape"
+let name = "Tranquillity Maker"
 let tagline = "Mix the Background Sounds\nbuilt into your Mac."
 let chips = ["16 sounds", "Menu bar", "Gapless loops"]
 let size = CGSize(width: 1280, height: 560)
@@ -108,7 +108,7 @@ struct Banner: View {
           .frame(width: 132, height: 132)
           .shadow(color: .black.opacity(0.35), radius: 18, y: 10)
         Text(name)
-          .font(.system(size: 76, weight: .bold))
+          .font(.system(size: 42, weight: .bold))
           .tracking(-1.8)
           .foregroundStyle(.white)
           .padding(.top, 26)

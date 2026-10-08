@@ -1,4 +1,4 @@
-// Captures the real Soundscape window for the README, in light and dark.
+// Captures the real Tranquillity Maker window for the README, in light and dark.
 // scripts/screenshot.sh compiles it with the app's sources, in place of SoundscapeApp.swift.
 
 import AppKit
@@ -22,7 +22,7 @@ enum Screenshot {
       backing: .buffered,
       defer: false
     )
-    window.title = "Soundscape"
+    window.title = "Tranquillity Maker"
     window.contentView = host
     window.center()
     _ = NotificationCenter.default.addObserver(forName: NSApplication.didFinishLaunchingNotification, object: nil, queue: .main) { _ in

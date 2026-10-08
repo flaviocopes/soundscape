@@ -10,7 +10,7 @@ struct SoundscapeiOSApp: App {
         ScrollView {
           MixerView()
         }
-        .navigationTitle("Soundscape")
+        .navigationTitle("Tranquillity Maker")
       }
       .environment(mixer)
     }

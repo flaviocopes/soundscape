@@ -5,7 +5,7 @@
 set -eu
 
 ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
-APP="$ROOT/build/screenshot/Soundscape Screenshot.app"
+APP="$ROOT/build/screenshot/Tranquillity Maker Screenshot.app"
 
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$ROOT/docs"
@@ -24,7 +24,7 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
   <key>CFBundleIdentifier</key>
   <string>com.flaviocopes.soundscape.screenshot</string>
   <key>CFBundleName</key>
-  <string>Soundscape</string>
+  <string>Tranquillity Maker</string>
   <key>CFBundlePackageType</key>
   <string>APPL</string>
   <key>NSHighResolutionCapable</key>
@@ -36,5 +36,5 @@ PLIST
 codesign --force --sign - "$APP"
 open -n "$APP" --args "$ROOT/docs" -AppleLocale en_US -AppleLanguages '(en)'
 sleep 1
-while pgrep -f "Soundscape Screenshot.app/Contents/MacOS" >/dev/null; do sleep 1; done
+while pgrep -f "Tranquillity Maker Screenshot.app/Contents/MacOS" >/dev/null; do sleep 1; done
 ls -la "$ROOT"/docs/screenshot-*.png

@@ -1,4 +1,4 @@
-# Soundscape
+# Tranquillity Maker
 
 A SwiftUI macOS app that mixes Apple's Background Sounds, with iPhone/iPad and Apple TV versions that share its audio engine. No dependencies, no tests yet.
 
@@ -18,8 +18,8 @@ A SwiftUI macOS app that mixes Apple's Background Sounds, with iPhone/iPad and A
 Requirements: macOS 15 or later, Xcode 26 (the `.icon` needs it).
 
 ```bash
-scripts/build-release.sh           # universal Release build, Developer ID sign + notarize when the cert is in the keychain, dist/Soundscape-<version>.zip
-open build/release/Release/Soundscape.app
+scripts/build-release.sh           # universal Release build, Developer ID sign + notarize when the cert is in the keychain, dist/Tranquillity Maker-<version>.zip
+open "build/release/Release/Tranquillity Maker.app"
 xcodegen generate                  # after editing project.yml
 swift scripts/render-icon.swift    # after editing the icon
 scripts/screenshot.sh              # docs/screenshot-light.png and -dark.png
@@ -30,7 +30,7 @@ The Apple TV app installs from the terminal once the Apple TV is paired in Xcode
 
 ```bash
 xcodebuild -project Soundscape.xcodeproj -scheme SoundscapeTV -destination 'id=<xctrace id>' -derivedDataPath build/tv-device -allowProvisioningUpdates build
-xcrun devicectl device install app --device <devicectl id> build/tv-device/Build/Products/Debug-appletvos/SoundscapeTV.app
+xcrun devicectl device install app --device <devicectl id> "build/tv-device/Build/Products/Debug-appletvos/Tranquillity Maker.app"
 xcrun devicectl device process launch --terminate-existing --device <devicectl id> com.flaviocopes.soundscape.tv
 ```
 
@@ -51,5 +51,5 @@ For a look without the device, boot a simulator headless with `xcrun simctl boot
 - Verify UI changes by building the app and opening it. `scripts/screenshot.sh` renders the real views without touching your saved mix.
 - Don't run `scripts/build-release.sh` just to test a change. It deletes `build/release`, where Flavio's copy runs from, and overwrites the `dist/` zip of the current release, whose checksum is published. Build Debug into its own folder instead, and delete test copies when done. They share the bundle ID, so a leftover copy can make macOS show a stale icon. For a release, quit the running copy before the build and reopen it after.
 - Releases are signed with Flavio's Developer ID (team `DGFKNTAG99`) with the hardened runtime, and notarized inside `scripts/build-release.sh` when the certificate is in the keychain and a notarytool profile named `notary` is set up. CI and forks have no certificate, so the script signs ad-hoc there and skips notarization.
-- The 30-second demo video comes from the separate Remotion project `~/dev/soundscape-showreel`. It's not part of this repo. Its soundtrack uses synthesized stand-ins for the sounds, never Apple's audio.
-- The launch post is `src/posts/soundscape.md` in `~/www/flaviocopes.com`, live at flaviocopes.com/soundscape.
+- The 30-second demo video comes from the separate Remotion project `~/dev/tranquillity-maker-showreel`. It's not part of this repo. Its soundtrack uses synthesized stand-ins for the sounds, never Apple's audio.
+- The launch post is `src/posts/tranquillity-maker.md` in `~/www/flaviocopes.com`, live at flaviocopes.com/tranquillity-maker.

@@ -7,7 +7,7 @@ struct TVMixerView: View {
     VStack(alignment: .leading, spacing: 40) {
       HStack(alignment: .center) {
         VStack(alignment: .leading, spacing: 8) {
-          Text("Soundscape")
+          Text("Tranquillity Maker")
             .font(.title3.bold())
           HStack(spacing: 0) {
             Text(status)

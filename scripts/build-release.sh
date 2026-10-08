@@ -1,8 +1,8 @@
 #!/bin/sh
-# Builds a universal (Apple silicon and Intel) Soundscape.app, signs it with Flavio's
+# Builds a universal (Apple silicon and Intel) Tranquillity Maker.app, signs it with Flavio's
 # Developer ID when that certificate is in the keychain (ad-hoc everywhere else),
 # notarizes and staples when Developer ID signed, checks the signature survives zipping,
-# and writes dist/Soundscape-<version>.zip.
+# and writes dist/Tranquillity Maker-<version>.zip.
 # Usage: scripts/build-release.sh
 set -eu
 
@@ -10,8 +10,8 @@ ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
 cd "$ROOT"
 VERSION=$(sed -n 's/^ *MARKETING_VERSION: "\(.*\)"$/\1/p' project.yml)
 BUILD="$ROOT/build/release"
-APP="$BUILD/Release/Soundscape.app"
-ZIP="$ROOT/dist/Soundscape-$VERSION.zip"
+APP="$BUILD/Release/Tranquillity Maker.app"
+ZIP="$ROOT/dist/Tranquillity Maker-$VERSION.zip"
 CHECK=$(mktemp -d)
 ENT=$(mktemp)
 EMPTY_ENT=$(mktemp)
@@ -25,7 +25,7 @@ mkdir -p dist
 xcodebuild -project Soundscape.xcodeproj -target Soundscape -configuration Release \
   ARCHS="arm64 x86_64" ONLY_ACTIVE_ARCH=NO SYMROOT="$BUILD" -quiet build
 
-lipo "$APP/Contents/MacOS/Soundscape" -verify_arch arm64 x86_64
+lipo "$APP/Contents/MacOS/Tranquillity Maker" -verify_arch arm64 x86_64
 
 IDENTITY=$(security find-identity -v -p codesigning | awk '/"Developer ID Application: Flavio Copes \(DGFKNTAG99\)"/ { print $2; exit }')
 if [ -n "$IDENTITY" ]; then
@@ -94,7 +94,7 @@ if [ "$SIGNATURE" = "Developer ID" ]; then
 fi
 
 ditto -x -k "$ZIP" "$CHECK"
-codesign --verify --deep --strict "$CHECK/Soundscape.app"
+codesign --verify --deep --strict "$CHECK/Tranquillity Maker.app"
 rm -rf "$CHECK"
 
 echo "Built $ZIP ($SIGNATURE signed)"

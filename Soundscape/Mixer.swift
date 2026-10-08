@@ -143,7 +143,7 @@ final class Mixer {
     let center = MPNowPlayingInfoCenter.default()
     center.nowPlayingInfo = [
       MPMediaItemPropertyTitle: mix.map(\.sound.name).formatted(.list(type: .and)),
-      MPMediaItemPropertyArtist: "Soundscape",
+      MPMediaItemPropertyArtist: "Tranquillity Maker",
       MPNowPlayingInfoPropertyIsLiveStream: true,
     ]
     center.playbackState = isPlaying ? .playing : .paused

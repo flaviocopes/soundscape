@@ -287,7 +287,7 @@
 				DEVELOPMENT_TEAM = DGFKNTAG99;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SoundscapeiOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Soundscape;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tranquillity Maker";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -296,6 +296,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.soundscape.ios;
+				PRODUCT_MODULE_NAME = SoundscapeiOS;
+				PRODUCT_NAME = "Tranquillity Maker";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -310,12 +312,14 @@
 				DEVELOPMENT_TEAM = DGFKNTAG99;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SoundscapeTV/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Soundscape;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tranquillity Maker";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.soundscape.tv;
+				PRODUCT_MODULE_NAME = SoundscapeTV;
+				PRODUCT_NAME = "Tranquillity Maker";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
@@ -329,13 +333,15 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Soundscape;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tranquillity Maker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.soundscape;
+				PRODUCT_MODULE_NAME = Soundscape;
+				PRODUCT_NAME = "Tranquillity Maker";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -374,7 +380,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -388,7 +394,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.5.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,7 +439,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -453,7 +459,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.5.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -473,13 +479,15 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Soundscape;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tranquillity Maker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.soundscape;
+				PRODUCT_MODULE_NAME = Soundscape;
+				PRODUCT_NAME = "Tranquillity Maker";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -493,12 +501,14 @@
 				DEVELOPMENT_TEAM = DGFKNTAG99;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SoundscapeTV/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Soundscape;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tranquillity Maker";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.soundscape.tv;
+				PRODUCT_MODULE_NAME = SoundscapeTV;
+				PRODUCT_NAME = "Tranquillity Maker";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
@@ -513,7 +523,7 @@
 				DEVELOPMENT_TEAM = DGFKNTAG99;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SoundscapeiOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Soundscape;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tranquillity Maker";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -522,6 +532,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.soundscape.ios;
+				PRODUCT_MODULE_NAME = SoundscapeiOS;
+				PRODUCT_NAME = "Tranquillity Maker";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
