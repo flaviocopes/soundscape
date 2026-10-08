@@ -18,7 +18,7 @@ A SwiftUI macOS app that mixes Apple's Background Sounds, with iPhone/iPad and A
 Requirements: macOS 15 or later, Xcode 26 (the `.icon` needs it).
 
 ```bash
-scripts/build-release.sh           # universal Release build, Developer ID sign + notarize when the cert is in the keychain, dist/Tranquillity Maker-<version>.zip
+scripts/build-release.sh           # universal Release build, Developer ID sign + notarize when the cert is in the keychain, dist/Tranquillity-Maker-<version>.zip
 open "build/release/Release/Tranquillity Maker.app"
 xcodegen generate                  # after editing project.yml
 swift scripts/render-icon.swift    # after editing the icon

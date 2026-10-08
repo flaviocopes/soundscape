@@ -10,7 +10,7 @@ Read the announcement and watch the 30-second demo on my blog: [I built Tranquil
 
 ## Download
 
-Get `Tranquillity Maker-1.5.0.zip` from the [latest release](https://github.com/flaviocopes/tranquillity-maker/releases/latest), unzip it, and drag Tranquillity Maker to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
+Get `Tranquillity-Maker-1.5.0.zip` from the [latest release](https://github.com/flaviocopes/tranquillity-maker/releases/latest), unzip it, and drag Tranquillity Maker to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
 
 ### Opening it the first time
 

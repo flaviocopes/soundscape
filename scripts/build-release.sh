@@ -2,7 +2,7 @@
 # Builds a universal (Apple silicon and Intel) Tranquillity Maker.app, signs it with Flavio's
 # Developer ID when that certificate is in the keychain (ad-hoc everywhere else),
 # notarizes and staples when Developer ID signed, checks the signature survives zipping,
-# and writes dist/Tranquillity Maker-<version>.zip.
+# and writes dist/Tranquillity-Maker-<version>.zip.
 # Usage: scripts/build-release.sh
 set -eu
 
@@ -11,7 +11,7 @@ cd "$ROOT"
 VERSION=$(sed -n 's/^ *MARKETING_VERSION: "\(.*\)"$/\1/p' project.yml)
 BUILD="$ROOT/build/release"
 APP="$BUILD/Release/Tranquillity Maker.app"
-ZIP="$ROOT/dist/Tranquillity Maker-$VERSION.zip"
+ZIP="$ROOT/dist/Tranquillity-Maker-$VERSION.zip"
 CHECK=$(mktemp -d)
 ENT=$(mktemp)
 EMPTY_ENT=$(mktemp)
